@@ -1,0 +1,567 @@
+@font-face {
+  font-family: FuturaPT_400;
+  font-dispay: swap;
+  src: url("../fonts/FuturaPTBook.woff2") format("woff2"), url("../fonts/FuturaPTBook.woff") format("woff");
+  font-weigth: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Gilroy_700;
+  font-dispay: swap;
+  src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
+  font-weigth: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Gilroy_800;
+  font-dispay: swap;
+  src: url("../fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("../fonts/Gilroy-ExtraBold.woff") format("woff");
+  font-weigth: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: Gilroy_400;
+  font-dispay: swap;
+  src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
+  font-weigth: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Gilroy_600;
+  font-dispay: swap;
+  src: url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
+  font-weigth: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: SFUI_400;
+  font-dispay: swap;
+  src: url("../fonts/SFUIText-Regular.woff2") format("woff2"), url("../fonts/SFUIText-Regular.woff") format("woff");
+  font-weigth: 400;
+  font-style: normal;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+body.lock-menu {
+  overflow: hidden;
+}
+
+button, input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+input[type=radio], input[type=checkbox] {
+  display: none;
+}
+
+label, button, input {
+  cursor: pointer;
+}
+
+button {
+  font-family: inherit;
+}
+
+li, button, p, span, a, h1, h2, h3, h4, h5, h6, label, input {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+}
+
+textarea {
+  outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=number]:hover,
+input[type=number]:focus {
+  -moz-appearance: number-input;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.d-f {
+  display: flex;
+}
+
+.j-c-center {
+  justify-content: center;
+}
+
+.j-c-start {
+  justify-content: flex-start;
+}
+
+.j-c-end {
+  justify-content: flex-end;
+}
+
+.j-c-space-bet {
+  justify-content: space-between;
+}
+
+.a-i-center {
+  align-items: center;
+}
+
+.a-i-start {
+  align-items: start;
+}
+
+.f-d-column {
+  flex-direction: column;
+}
+
+.f-d-row {
+  flex-direction: row;
+}
+
+.f-d-row-r {
+  flex-direction: row-reverse;
+}
+
+.m-5_b {
+  margin-bottom: 5px;
+}
+
+.m-10_b {
+  margin-bottom: 10px;
+}
+
+.m-15_b {
+  margin-bottom: 15px;
+}
+
+.m-20_b {
+  margin-bottom: 20px;
+}
+
+.m-25_b {
+  margin-bottom: 25px;
+}
+
+.m-30_b {
+  margin-bottom: 30px;
+}
+
+.m-5_r {
+  margin-right: 5px;
+}
+
+.m-10_r {
+  margin-right: 10px;
+}
+
+.m-15_r {
+  margin-right: 15px;
+}
+
+.m-20_r {
+  margin-right: 20px;
+}
+
+.m-25_r {
+  margin-right: 25px;
+}
+
+.m-30_r {
+  margin-right: 30px;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 30px;
+  font-family: "Gilroy_600";
+  transition: all 0.7s ease-in-out;
+}
+
+.button {
+  border: 1px solid #64D06F;
+  border-radius: 15px;
+  color: white;
+  font-size: 16px;
+  line-height: 30px;
+  background-color: #64D06F;
+  transition: all 0.6s ease-in-out;
+  box-shadow: 3px 3px 2px gray;
+}
+.button:hover {
+  box-shadow: 0px 0px 0px gray;
+  transform: scale(0.9);
+}
+.button:disabled {
+  background: #AAAAAA;
+  border: 1px solid #AAAAAA;
+  cursor: auto;
+}
+.button:disabled:hover {
+  box-shadow: 3px 3px 2px gray;
+  transform: scale(1);
+}
+
+.title_h1,
+.title_h2,
+.title_h3 {
+  font-size: 52px;
+  line-height: 62px;
+  font-family: "Gilroy_700";
+  color: white;
+}
+
+.title_h2 {
+  font-size: 34px;
+  line-height: 45px;
+}
+
+.title_h3 {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+@media screen and (max-width: 1120px) {
+  .text {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .title_h1 {
+    font-size: 44px;
+    line-height: 52px;
+  }
+  .title_h2 {
+    font-size: 30px;
+    left: 40px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .title_h1 {
+    font-size: 24px;
+    line-height: 29.02px;
+  }
+  .title_h2,
+  .title_h3 {
+    font-size: 24px;
+    line-height: 31.68px;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .button {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .text {
+    font-size: 12px;
+  }
+}
+.box_field {
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+.box_field input[type=number]:focus {
+  outline: 1px solid #3EA9E5;
+  box-shadow: 1px 1px 3px 3px #3EA9E5;
+  transition: all 0.4s ease-in-out;
+}
+.box_field .fields_error_text {
+  font-size: 12px;
+  line-height: 16px;
+  position: absolute;
+  z-index: -1;
+  top: 32px;
+  left: 15px;
+  color: white;
+  font-family: "Gilroy_400";
+}
+
+.box_field.has_error {
+  z-index: 1;
+}
+.box_field.has_error input[type=number] {
+  outline: 2px solid rgba(253, 32, 33, 0.47) !important;
+  background-color: rgba(253, 32, 33, 0.47);
+}
+.box_field.has_error input[type=number]:focus {
+  outline: 2px solid rgba(253, 32, 33, 0.47) !important;
+  box-shadow: 1px 1px 3px 3px rgba(253, 32, 33, 0.47) !important;
+  background-color: rgba(253, 32, 33, 0.47);
+}
+.box_field.has_error .fields_error_text {
+  z-index: 1;
+}
+
+.box_field.no_error input[type=number] {
+  outline: 2px solid #64D06F !important;
+  background-color: #64D06F;
+}
+.box_field.no_error input[type=number]:focus {
+  outline: 2px solid #64D06F !important;
+  box-shadow: 1px 1px 3px 3px #64D06F !important;
+  background-color: #64D06F;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  width: 100%;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 6px;
+  background: #3EA9E5;
+}
+
+input[type=range]::-moz-range-track {
+  height: 6px;
+  border-radius: 6px;
+  background: #3EA9E5;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -13px;
+  background-color: #FF7900;
+  height: 32px;
+  width: 8px;
+  border-radius: 4px;
+}
+
+input[type=range]::-moz-range-thumb {
+  border: none;
+  background-color: #FF7900;
+  height: 32px;
+  width: 8px;
+  border-radius: 4px;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-thumb {
+  border: 1px solid #053a5f;
+  outline: 3px solid #053a5f;
+  outline-offset: 0.125rem;
+}
+
+input[type=range]:focus::-moz-range-thumb {
+  border: 1px solid #053a5f;
+  outline: 3px solid #053a5f;
+  outline-offset: 0.125rem;
+}
+
+.credit_calculator {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(../img/desc_bg-1280x768.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  padding: 80px 10px 70px 10px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.box_calculator-title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.box_calculator-sm_title {
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.calculator {
+  padding: 80px 40px 60px;
+  height: 700px;
+  width: 500px;
+  background: #4267B2;
+  border-radius: 40px;
+  box-shadow: 4px 3px 3px #CCCCCC;
+}
+
+.calculator_screen {
+  padding: 20px 8px;
+  margin-bottom: 80px;
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+  border: 3px solid #4C4C4C;
+  background-color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  color: #4C4C4C;
+}
+.calculator_screen::after {
+  content: "";
+  display: block;
+  width: calc(100% + 10px);
+  height: 4px;
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 10px;
+  background-color: #3EA9E5;
+}
+
+.money_number {
+  padding-left: 10px;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #FF7900;
+}
+
+.sum-per-month {
+  margin-bottom: 10px;
+}
+
+.box_field_number {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.calc_label {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 22px;
+  color: white;
+  font-family: "Gilroy_600";
+}
+
+.calc_input {
+  padding: 15px 10px 9px 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Gilroy_600";
+  letter-spacing: 0.5px;
+  color: white;
+  background-color: #74CDFF;
+}
+
+.get-money-btn {
+  padding: 10px 20px;
+  margin-top: 50px;
+  width: 100%;
+  text-transform: uppercase;
+  font-family: "Gilroy_800";
+  letter-spacing: 2px;
+}
+
+.calculator_text-desc {
+  color: white;
+  max-width: 500px;
+}
+
+@media screen and (max-width: 1050px) {
+  .calculator_text-desc {
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .container {
+    padding: 40px 10px 30px 10px;
+  }
+  .box-two_coloms {
+    flex-direction: column;
+    align-items: center;
+  }
+  .calculator {
+    order: 2;
+  }
+  .text-desc {
+    order: 1;
+  }
+  .calculator_text-desc {
+    max-width: 700px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 640px) {
+  .box_calculator-title {
+    margin-bottom: 20px;
+  }
+  .box_calculator-sm_title {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .container {
+    padding: 40px 20px 30px 20px;
+  }
+  .calculator {
+    padding: 60px 20px 30px;
+    width: 100%;
+    height: 570px;
+  }
+  .calculator_screen {
+    margin-bottom: 60px;
+    padding: 10px 4px;
+  }
+  .get-money-btn {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .container {
+    padding: 40px 10px 30px 10px;
+  }
+  .calculator {
+    padding: 40px 10px 30px 10px;
+  }
+  .money_number {
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 5px;
+  }
+}

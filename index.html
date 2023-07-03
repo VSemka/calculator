@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/png" href="../img/calculator.png"/>
+
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <title>Credit calculator</title>
+</head>
+
+<body>
+
+<div class="credit_calculator">
+
+    <div class="container">
+
+        <div class="box_calculator">
+
+            <h1 class="title_h1 box_calculator-title">Втіль мрії в життя!!!</h1>
+
+            <h2 class="title_h2 box_calculator-sm_title">Отримай кошти за 3 хв</h2>
+
+            <div class="box-two_coloms d-f j-c-space-bet">
+
+                <div class="calculator">
+
+                    <form action="POST">
+
+                        <div class="calculator_screen">
+
+                            <p class="sum-per-month text">Cума щомісячного платежу: 
+                                <span id="fieldToPayMonth" class="money_number">500000 грн</span>
+                            </p>
+
+                            <p class="sum-to-pay-one-time text">Загальну сума погашення: 
+                                <span id="fieldToPayFullSum" class="money_number">500000 грн</span>
+                            </p>
+
+                        </div>
+                         
+                        <div class="box_field box_field_number">
+
+                            <label for="creditMoney" class="calc_label">Сума кредиту</label>
+                            <input type="number" step="100" min="1000" max="50000" class="calc_input" name="maney" id="creditMoney" placeholder="Вкажіть суму, яка вас цікавить">
+                            <p class="fields_error_text" id="hiddenSmsMoney"></p>
+
+                            <input type="range" class="calc_label" min="1000" max="50000" value="100" id="sliderCreditMoney">
+                        </div>
+
+                        <div class="box_field box_field_number">
+                            <label for="periodDays" class="calc_label">Період погашення (днів)</label>
+                            <input type="number" min="7" max="60" step="1" class="calc_input" name="periodDays" id="periodDays" placeholder="Вкажіть період кредитуваня">
+                            <p class="fields_error_text" id="hiddenSmsDay"></p>
+
+                            <input type="range" min="7" max="60" value="1" id="sliderPeriodDays">
+                        </div>
+        
+                        <button type="submit" id="calculatorBtn" class="button get-money-btn" disabled>Отримати кредит</button>
+        
+                    </form>
+        
+                </div> 
+    
+                <div class="text-desc">
+                    <p class="text calculator_text-desc">Для зручності розрахунку скористайся кредитним калькулятор. 
+                       Він допоможе визначити суму щомісячного платежу та суму дострокого платежу</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/app.min.js"></script>
+
+</body>
+        
+</html>
